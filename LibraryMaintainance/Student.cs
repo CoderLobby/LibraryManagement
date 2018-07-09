@@ -9,6 +9,7 @@ namespace LibraryMaintainance
 {
 	class Student
 	{
+		// NOTE: Apply a loop check before sending in data.
 		private string _name;
 		public string Name {
 			get => _name;
@@ -21,11 +22,12 @@ namespace LibraryMaintainance
 				}
 				else
 				{
+					_name = "DEFAULT";
 					Console.WriteLine("Its not valid! /t Please Try again!");
 				}
 			}
 		}
-
+		// NOTE: Apply a loop check before sending in data.
 		private int _studentID;
 		public int StudentID
 		{
@@ -44,5 +46,10 @@ namespace LibraryMaintainance
 			}
 		}
 
+		public Student(string name, int studentID)
+		{
+			Name = name;
+			StudentID = studentID;
+		}
 	}
 }
