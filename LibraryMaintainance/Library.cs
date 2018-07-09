@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LibraryMaintainance
 {
@@ -11,27 +12,22 @@ namespace LibraryMaintainance
 		
 		public List<Shelf> Shelves { get; set; }
 
-		Library(List<Shelf> shelves)
+		Library(List<Shelf> shelves, List<Student> students)
 		{
 			Shelves = shelves;
+			Students = students;
 		}
 
 		public List<Student> Students { get; set; }
-	}
 
-	class Shelf
-	{
-		// Naming Convension: CoderLobby
-		string Topic { get; set; }
-		List<Book> Books { get; set; }
-
-		Shelf(string topic, List<Book> books)
+		public Library Load()
 		{
-			Topic = topic;
-			var temp = from book in books
-					   where book.Topic.ToLower() == Topic.ToLower()
-					   select book;
-			Books = temp.ToList();
+			string path = System.AppDomain.CurrentDomain.BaseDirectory + "library_store.json";
+		}
+
+		public void Save()
+		{
+
 		}
 	}
 }

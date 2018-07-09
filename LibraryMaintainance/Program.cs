@@ -10,6 +10,11 @@ namespace LibraryMaintainance
 	{
 		static void Main(string[] args)
 		{
+			
+		}
+
+		private static DisplayMainMenu()
+		{
 
 		}
 	}
