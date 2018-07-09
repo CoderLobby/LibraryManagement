@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace LibraryMaintainance
 {
-	partial class Library
+	class Library
 	{
-		public Library(List<Shelf> shelves)
-		{
-			Shelves = shelves;
-		}
-
-		public List<Shelf> Shelves { get; set; }
-		
+				
 	}
 }
